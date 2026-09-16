@@ -100,7 +100,7 @@ export default function QRScanner({ onScan, onError }) {
           <div className="text-left" style={{ flex: 1 }}>
             <strong>Camera Permission Required</strong>
             <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>
-              Verity requires camera permission to scan QR codes. Access was denied or dismissed.
+              Credence requires camera permission to scan QR codes. Access was denied or dismissed.
             </p>
           </div>
         </div>

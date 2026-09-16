@@ -1,7 +1,7 @@
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-import { ToastProvider } from "./components/Toast";
+import Providers from "./components/Providers";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -16,26 +16,26 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Verity — Blockchain Certificate Verification",
+  title: "Credence — Blockchain Certificate Verification",
   description:
     "Issue, verify, and manage tamper-proof digital certificates secured by blockchain technology and IPFS.",
-  keywords: "blockchain, certificate, verification, IPFS, decentralized, Web3, Verity",
+  keywords: "blockchain, certificate, verification, IPFS, decentralized, Web3, Credence",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${plusJakarta.variable} ${inter.variable} ${inter.className}`}>
-        <ToastProvider>
+        <Providers>
           <NavBar />
           <main style={{ flex: 1 }}>{children}</main>
           <footer className="footer">
             <p>
-              Verity — Blockchain-Powered Certificate Verification ·{" "}
-              Secured by Ethereum & IPFS
+              Credence — Blockchain-Powered Certificate Verification &middot;{" "}
+              Secured by Ethereum &amp; IPFS
             </p>
           </footer>
-        </ToastProvider>
+        </Providers>
       </body>
     </html>
   );

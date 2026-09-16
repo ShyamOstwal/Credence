@@ -1,12 +1,12 @@
-# 🛡️ Verity — Blockchain Certificate Verification Platform
+# 🛡️ Credence — Blockchain Certificate Verification Platform
 
-Verity is a secure, decentralized, and institution-grade platform designed to issue, manage, and verify academic and professional certificates. By anchoring document credentials directly onto a public blockchain (L2 / Ethereum Sepolia) and hosting the source documents permanently on **IPFS**, Verity makes document forgery mathematically impossible and verification instant.
+Credence is a secure, decentralized, and institution-grade platform designed to issue, manage, and verify academic and professional certificates. By anchoring document credentials directly onto a public blockchain (L2 / Ethereum Sepolia) and hosting the source documents permanently on **IPFS**, Credence makes document forgery mathematically impossible and verification instant.
 
 ---
 
 ## 🌐 Industry-Ready Workflow
 
-Verity operates as a zero-trust verification system, combining local hashing, decentralized storage, and a public ledger:
+Credence operates as a zero-trust verification system, combining local hashing, decentralized storage, and a public ledger:
 
 ```mermaid
 sequenceDiagram
@@ -41,12 +41,12 @@ sequenceDiagram
 
 ### ❓ What is the role of the QR code?
 The QR code is a visual shortcut designed to make verification instant. 
-* Instead of requiring an employer to navigate to the Verity portal, copy a long 64-character SHA-256 hash, and paste it manually, they simply scan the QR code.
-* The QR code automatically resolves to: `https://verity.domain.com/verify?hash=0xYOUR_HASH`.
+* Instead of requiring an employer to navigate to the Credence portal, copy a long 64-character SHA-256 hash, and paste it manually, they simply scan the QR code.
+* The QR code automatically resolves to: `https://Credence.domain.com/verify?hash=0xYOUR_HASH`.
 * The portal reads the hash parameter from the URL and **instantly displays** the live, on-chain authenticity result.
 
 ### ❓ If a student changes the text on the PDF but leaves the QR code unchanged, can they bypass security?
-**Absolutely not.** This is the core strength of Verity's two-layered security system:
+**Absolutely not.** This is the core strength of Credence's two-layered security system:
 
 1. **The Visual Comparison Proof (If they scan the QR):**
    When the employer scans the original QR code, it opens the verification portal for the *original*, un-edited document hash. The blockchain will return **Valid**, but it will also pull the **original, un-edited PDF directly from IPFS** and display it side-by-side. The employer will immediately see the grade mismatch (e.g., Grade "C" on IPFS vs Grade "A" on the forged PDF).
@@ -67,7 +67,7 @@ The QR code is a visual shortcut designed to make verification instant.
 
 ## 🚀 Local Development Setup
 
-To run Verity completely locally on your computer:
+To run Credence completely locally on your computer:
 
 ### 1. Start the Local Blockchain Node
 ```bash
@@ -92,13 +92,13 @@ cd frontend
 npm install
 npm run dev
 ```
-Open **`http://localhost:3000`** in your browser to interact with Verity!
+Open **`http://localhost:3000`** in your browser to interact with Credence!
 
 ---
 
 ## ☁️ Public Production Deployment (Vercel & Sepolia)
 
-To deploy Verity live to the public for free:
+To deploy Credence live to the public for free:
 
 ### 1. Configure Local Keys
 Create a `.env.local` inside `frontend/` and a `.env` inside `blockchain/`:
